@@ -3,7 +3,7 @@ BeSport Platform Dependencies
 
 These dependencies are required by the BeSport platform, but we put them here for anyone to use.
 
-To install them, simply use :
+To install them :
 
    * Setup the BeSport tap (ignore any warnings about already-existing ocaml)
 
