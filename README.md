@@ -7,11 +7,11 @@ To install them :
 
    * Setup the BeSport tap (ignore any warnings about already-existing ocaml)
 
-         brew tap besport/homebrew-besport
+         brew tap besport/ocaml
 
    * Install OCaml from source (we still need a special patch for things to work correctly)
 
-         brew install --source besport/homebrew-besport/objective-caml
+         brew install --source besport/ocaml/objective-caml
     
    * Install Dependencies
 
