@@ -15,6 +15,7 @@ class OcamlOasis < Formula
   def install
     ENV.deparallelize
     ENV['OCAMLFIND_DESTDIR'] = "#{lib}/ocaml/site-lib/"
+    ENV['OCAMLRUNPARAM'] = ""
 
     (lib + "ocaml/site-lib/").mkpath
 
@@ -24,4 +25,24 @@ class OcamlOasis < Formula
 
   def test
   end
+
+  def patches
+    DATA
+  end
 end
+
+__END__
+diff --git a/Makefile b/Makefile
+index e386a51..5b9639e 100644
+--- a/Makefile
++++ b/Makefile
+@@ -27,7 +27,7 @@ CONFIGUREFLAGS += $(if $(shell ocamlfind query gettext),--enable-gettext,--disab
+ default: test
+        -OCamlDarcsPrecommit
+ 
+-export OCAMLRUNPARAM=b
++# export OCAMLRUNPARAM=b
+ TESTFLAGS      += -not-long
+ #TESTFLAGS      += -verbose
+ #TESTFLAGS      += -only-test OASIS:5:TestFull:2:../examples/packedlib:0:standard
+
