@@ -18,7 +18,7 @@ class OcamlOasis < Formula
 
     (lib + "ocaml/site-lib/").mkpath
 
-    system "make"
+    system "make build"
     system "make install"
   end
 
