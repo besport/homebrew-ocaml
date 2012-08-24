@@ -52,7 +52,7 @@ index 9be5199..35566a5 100755
      i[3456]86-*-linux*)           natdynlink=true;;
      x86_64-*-linux*)              natdynlink=true;;
 -    i[3456]86-*-darwin10.*)
-+    i[3456]86-*-darwin1[01].*)
++    i[3456]86-*-darwin1[0123456789].*)
        if test $arch64 == true; then
          natdynlink=true
        fi;;
