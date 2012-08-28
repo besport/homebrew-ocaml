@@ -22,7 +22,7 @@ class OcamlEliom < Formula
 
     (lib + "ocaml/site-lib/").mkpath
 
-    system "sh", "configure", "--bindir", bin, "--docdir", doc
+    system "sh", "configure", "--bindir", bin, "--docdir", doc, "--without-ocamlduce"
     system "make"
     system "make install" # if this fails, try separate make/make install steps
   end

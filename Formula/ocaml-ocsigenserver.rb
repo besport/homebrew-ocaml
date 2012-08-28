@@ -14,6 +14,7 @@ class OcamlOcsigenserver < Formula
   depends_on 'ocaml-ssl'
   depends_on 'ocaml-tyxml'
   depends_on 'ocaml-net'
+  depends_on 'ocaml-sqlite3'
 
   def install
     ENV.deparallelize
@@ -24,7 +25,7 @@ class OcamlOcsigenserver < Formula
     (var + "run/").mkpath
     (var + "log/ocsigenserver/").mkpath
 
-    system "sh", "configure", "--commandpipe", "#{var}/run/ocsigenserver_commandpipe", "--datadir", "#{var}/lib/ocsigenserver/", "--bindir", bin, "--mandir", man, "--docdir", doc, "--ocsigen-user", "fx", "--ocsigen-group", "admin", "--sysconfdir", "#{etc}/ocsigenserver/", "--staticpagesdir", "#{var}/ocsigenserver/www", "--logdir", "#{var}/log/ocsigenserver/"
+    system "sh", "configure", "--commandpipe", "#{var}/run/ocsigenserver_commandpipe", "--datadir", "#{var}/lib/ocsigenserver/", "--bindir", bin, "--mandir", man, "--docdir", doc, "--ocsigen-user", "fx", "--ocsigen-group", "admin", "--sysconfdir", "#{etc}/ocsigenserver/", "--staticpagesdir", "#{var}/ocsigenserver/www", "--logdir", "#{var}/log/ocsigenserver/", "--with-sqlite"
     system "make"
     system "make", ("BINDIR=" + bin), "install"
   end

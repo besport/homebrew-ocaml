@@ -8,9 +8,9 @@ class ObjectiveCaml < Formula
   head 'http://caml.inria.fr/svn/ocaml/trunk', :using => :svn
 
   devel do
-    url 'http://caml.inria.fr/pub/distrib/ocaml-4.00/ocaml-4.00.0+beta2.tar.bz2'
-    sha1 '75fedc849cc1cbfe620f0258c0f6c8214467efb7'
-    version '4.00.0+beta2'
+    url 'http://caml.inria.fr/pub/distrib/ocaml-4.00/ocaml-4.00.0.tar.gz'
+    sha1 '9653e76dd14f0fbb750d7b438415890ab9fe2f4e'
+    version '4.00.0'
   end
 
   bottle do
