@@ -3,10 +3,10 @@ require 'formula'
 # Documentation: https://github.com/mxcl/homebrew/wiki/Formula-Cookbook
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
 
-class OcamlQuadtree < Formula
+class OcamlAliases < Formula
   homepage ''
-  url 'https://github.com/besport/ocaml-quadtree.git', :using => :git
-  version '0.0.1'
+  url 'https://github.com/besport/ocaml-aliases.git', :using => :git
+  version '0.0.2'
 
   depends_on 'ocaml'
   depends_on 'ocaml-findlib' => :build
@@ -19,8 +19,9 @@ class OcamlQuadtree < Formula
     (lib + "ocaml/site-lib/").mkpath
 
     system "oasis", "setup"
-    system "make"
-    system "make install"
+    system "ocaml", "setup.ml", "-configure"
+    system "ocaml", "setup.ml", "-build"
+    system "ocaml", "setup.ml", "-install"
   end
 
   def test
