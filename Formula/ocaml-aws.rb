@@ -26,6 +26,7 @@ class OcamlAws < Formula
 
     (lib + "ocaml/site-lib/").mkpath
 
+    system "oasis", "setup"
     system "ocaml", "setup.ml", "-configure", "--bindir", bin
     system "ocaml", "setup.ml", "-build"
     system "ocaml", "setup.ml", "-install"
