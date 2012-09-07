@@ -10,6 +10,7 @@ class OcamlAws < Formula
 
   depends_on 'ocaml'
   depends_on 'ocaml-findlib' => :build
+  depends_on 'ocaml-oasis' => :build
 
   depends_on 'ocaml-lwt'
   depends_on 'ocaml-net'
