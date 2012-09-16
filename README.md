@@ -15,5 +15,4 @@ To install them :
     
    * Install Dependencies
 
-         brew install ocaml-aws ocaml-calendar ocaml-camlzip ocaml-cohttp ocaml-cppo ocaml-cryptokit ocaml-data-notation ocaml-deriving ocaml-easy-format ocaml-eliom ocaml-ev ocaml-findlib ocaml-imagemagick ocaml-jsofocaml ocaml-leveldb ocaml-lwt ocaml-net ocaml-oasis ocaml-pcre ocaml-aliases ocaml-react ocaml-sqlite3 ocaml-ssl ocaml-typeconv ocaml-tyxml ocaml-xmlm ocaml-yojson ocamlify ocamlmod ocaml-biniou ocaml-ocsigenserver
-
+         brew install ocaml-aws ocaml-calendar ocaml-camlzip ocaml-cppo ocaml-cryptokit ocaml-data-notation ocaml-deriving ocaml-easy-format ocaml-eliom ocaml-ev ocaml-findlib ocaml-imagemagick ocaml-jsofocaml ocaml-leveldb ocaml-lwt ocaml-net ocaml-oasis ocaml-pcre ocaml-aliases ocaml-react ocaml-sqlite3 ocaml-ssl ocaml-typeconv ocaml-tyxml ocaml-xmlm ocaml-yojson ocamlify ocamlmod ocaml-biniou ocaml-ocsigenserver

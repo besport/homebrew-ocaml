@@ -17,7 +17,7 @@ class OcamlAws < Formula
   depends_on 'ocaml-cryptokit'
   depends_on 'ocaml-calendar'
   depends_on 'ocaml-xmlm'
-  depends_on 'ocaml-cohttp'
+  depends_on 'ocaml-ocsigenserver'
   depends_on 'ocaml-yojson'
 
   def install
