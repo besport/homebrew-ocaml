@@ -10,7 +10,6 @@ class OcamlLeveldb < Formula
 
   depends_on 'ocaml'
   depends_on 'ocaml-findlib' => :build
-  depends_on 'o-make'
   depends_on 'snappy'
 
   def install
