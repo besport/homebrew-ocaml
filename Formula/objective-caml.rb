@@ -21,8 +21,22 @@ class ObjectiveCaml < Formula
   # Don't strip symbols, so dynamic linking doesn't break.
   skip_clean :all
 
+  option 'without-x', 'Build without X11 support'
+
+  depends_on :x11 unless build.include? 'without-x'
+
   def install
-    system "./configure", "--prefix", HOMEBREW_PREFIX, "--mandir", man
+    configure_args = %W[
+      --prefix #{HOMEBREW_PREFIX}
+      --mandir #{man}
+    ]
+    unless build.include? 'without-x'
+      configure_args << %W[
+        --x11lib #{MacOS::X11.lib}
+        --x11include #{MacOS::X11.include}
+      ]
+    end
+    system "./configure", *configure_args
     ENV.deparallelize # Builds are not parallel-safe, esp. with many cores
     system "make world"
     system "make world.opt"
