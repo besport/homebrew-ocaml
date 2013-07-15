@@ -1,3 +1,8 @@
+Depcrecated
+===========
+use opam instead. http://opam.ocamlpro.com/
+
+
 BeSport Platform Dependencies
 =============================
 
